@@ -14,7 +14,7 @@ public class testTrimmedMean {
 
     @Test
     public void test() {
-        TrimmedMean mean = new TrimmedMean(10,2,2,false);
+        TrimmedMean mean = new TrimmedMean(10,0.99,2,2,false);
         for(int i = 0; i < 100; i++) {
             mean.setValue((long)i);
         }

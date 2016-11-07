@@ -1,7 +1,7 @@
 #TrimmedMean#
 
 <p>
-TrimmedMean can compute mean value after trim some exception value (include top n and bottom n value). TrimmedMean is realtime, you can retrieve mean value in anytime. Because it comput exception value in a fixed size slide windows,  It's not accurate totally, but it's is enough in practice.
+TrimmedMean can compute mean value after trim some peak value (include top n and bottom n value). TrimmedMean is realtime, you can retrieve mean value in anytime. Because it comput exception value in a fixed size slide windows,  It's not accurate totally, but it's is enough in practice.
 </p>
 <p>
 TrimmedMean is thread safe. you can call setValue method in different thread concurrently. 

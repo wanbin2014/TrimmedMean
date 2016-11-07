@@ -26,9 +26,18 @@ public class TrimmedMean {
     private int avgCacheLimit = 100;
 
 
-    public TrimmedMean(int cacheSize, int bottomNum, int topNum, boolean threadSafe) {
+    /***
+     *
+     * @param cacheSize  means slide windows's size
+     * @param coefficient normal value percentage in every slide windows, e.g. 0.99
+     * @param bottomNum amount of bottom peak values,these values don't involve in calculating mean
+     * @param topNum amount of top peak values,these values don't involve in calculating mean
+     * @param threadSafe represent whether need thread safe.
+     */
+    public TrimmedMean(int cacheSize, double coefficient,int bottomNum, int topNum,boolean threadSafe) {
         this.cacheSize = cacheSize;
         this.bottomNum = bottomNum;
+        this.coefficient = coefficient;
         this.topNum = topNum;
         if (threadSafe == false) {
             this.cache = new ArrayList<Long>();
