@@ -9,7 +9,7 @@ TrimmedMean is thread safe. you can call setValue method in different thread con
 
 ## For Example ##
 
-<code>
+```
 TrimmedMean mean = new TrimmedMean(10,2,2,false);
 for(int i = 0; i < 100; i++) {
       mean.setValue((long)i);
@@ -21,4 +21,4 @@ for(int i = 0; i < 100; i++) {
       mean.setValue((long)i);
 }
 System.out.println(mean.getValue());
-</code>
+```
